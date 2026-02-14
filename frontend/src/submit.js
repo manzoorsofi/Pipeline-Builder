@@ -1,6 +1,7 @@
 // submit.js
 // Part 4: Submit pipeline to backend for DAG analysis
 
+import { createPortal } from 'react-dom';
 import { useStore } from './store';
 import { shallow } from 'zustand/shallow';
 import { useState, useEffect } from 'react';
@@ -160,12 +161,13 @@ export const SubmitButton = () => {
         </button>
       </div>
 
-      {showModal && (
+      {showModal && createPortal(
         <ResultModal
           data={result}
           error={error}
           onClose={() => setShowModal(false)}
-        />
+        />,
+        document.body
       )}
     </>
   );
