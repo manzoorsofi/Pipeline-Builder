@@ -98,6 +98,9 @@ export const PipelineUI = () => {
 
     return (
         <div ref={reactFlowWrapper} className="reactflow-wrapper">
+            {nodes.length === 0 && (
+              <div className="empty-hint">Drag nodes from the toolbar to start building</div>
+            )}
             <ReactFlow
                 nodes={nodes}
                 edges={edges}
