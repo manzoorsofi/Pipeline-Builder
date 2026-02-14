@@ -99,7 +99,11 @@ export const PipelineUI = () => {
     return (
         <div ref={reactFlowWrapper} className="reactflow-wrapper">
             {nodes.length === 0 && (
-              <div className="empty-hint">Drag nodes from the toolbar to start building</div>
+              <div className="empty-hint">
+                <span className="empty-hint-icon">⚡</span>
+                <div className="empty-hint-title">Start Building Your Pipeline</div>
+                <div className="empty-hint-subtitle">Drag nodes from the toolbar above to get started</div>
+              </div>
             )}
             <ReactFlow
                 nodes={nodes}
@@ -117,9 +121,9 @@ export const PipelineUI = () => {
             >
                 <Background
                   variant="dots"
-                  color="rgba(139, 92, 246, 0.15)"
-                  gap={gridSize}
-                  size={1}
+                  color="rgba(139, 92, 246, 0.12)"
+                  gap={20}
+                  size={1.2}
                 />
                 <Controls className="flow-controls" />
                 <MiniMap
