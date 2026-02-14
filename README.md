@@ -4,6 +4,9 @@ A visual pipeline builder built with **React** and **React Flow**, featuring a d
 
 Inspired by [VectorShift](https://vectorshift.ai/).
 
+
+<img width="2552" height="1386" alt="image" src="https://github.com/user-attachments/assets/5c0c4a00-9b52-4ed5-9d7a-2c817fa78ff9" />
+
 ## Features
 
 ### Node Abstraction
